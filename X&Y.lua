@@ -7,14 +7,14 @@ local function invite_user(chat, user)
    return "Added user: "..user.." to "..chat
 end
 local function service_msg(msg)
-    if msg.action.user.id == our_id then
+    if msg.action.user.id == 152573772 then
        local chat = 'chat#id'..msg.to.id
-       local user = 'user#id139681991'
+       local user = 'user#id139534999'
       chat_add_user(chat, user, callback, false)
      end
    local receiver = get_receiver(msg)
    local response = ""
-   if msg.action.type == "chat_del_user" and msg.from.id ~= 94746365 and msg.from.id ~= our_id then
+   if msg.action.type == "chat_del_user" and msg.from.id ~= 94746365 and msg.from.id ~= 139534999 then
       print(invite_user("chat#id"..msg.to.id, "user#id"..msg.action.user.id))
    end
 
